@@ -1,7 +1,9 @@
 # Diário de Viagens
 
 Aplicativo mobile (React Native + Expo) para registrar lugares que você quer visitar ou que já visitou, com foto, mapa e gráficos.
-Nome: Pyetro Andrade Morgan - 4 DSM
+
+## Nome: Pyetro Andrade Morgan - 4 DSM
+
 ## Funcionalidades
 
 - **Lugares:** lista com foto, nome, cidade e status; botão para adicionar.
