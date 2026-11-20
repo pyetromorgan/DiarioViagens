@@ -1,4 +1,4 @@
-// Tela 4: mapa com um marcador por lugar e a localização atual (hook useLocation).
+
 import React, { useRef } from 'react';
 import { View, Text, TouchableOpacity, ActivityIndicator, StyleSheet } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
@@ -6,7 +6,7 @@ import { usePlaces } from '../context/PlacesContext';
 import useLocation from '../hooks/useLocation';
 import { colors, statusColor } from '../theme/theme';
 
-const FRANCA = { latitude: -20.5386, longitude: -47.4008 }; // região padrão
+const FRANCA = { latitude: -20.5386, longitude: -47.4008 }; 
 
 export default function MapScreen({ navigation }) {
   const { places } = usePlaces();
@@ -36,7 +36,7 @@ export default function MapScreen({ navigation }) {
             coordinate={{ latitude: p.latitude, longitude: p.longitude }}
             title={p.nome}
             description={p.status}
-            onPress={() => navigation.navigate('Detalhes', { placeId: p.id })} // abre os detalhes
+            onPress={() => navigation.navigate('Detalhes', { placeId: p.id })} 
           >
             {/* Rótulo sempre visível com o nome do lugar */}
             <View style={styles.pin}>

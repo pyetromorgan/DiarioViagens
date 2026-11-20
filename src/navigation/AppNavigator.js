@@ -1,4 +1,3 @@
-// Navegação: abas (Lista, Mapa, Estatísticas) dentro de uma pilha com Cadastro e Detalhes.
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';

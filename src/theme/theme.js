@@ -1,4 +1,3 @@
-// Cores e constantes compartilhadas por todo o app.
 export const colors = {
   primary: '#0B3C49',
   bg: '#F7F4EE',

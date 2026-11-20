@@ -1,4 +1,3 @@
-// Item da lista: miniatura, nome, cidade e status.
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import StatusBadge from './StatusBadge';

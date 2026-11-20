@@ -1,9 +1,8 @@
-// Captura/escolha de foto e gravação na galeria do dispositivo.
 import { Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as MediaLibrary from 'expo-media-library';
 
-// Tira a foto na hora, salva na galeria e devolve o uri.
+
 export async function takePhoto() {
   const cam = await ImagePicker.requestCameraPermissionsAsync();
   if (!cam.granted) {
@@ -18,7 +17,7 @@ export async function takePhoto() {
   if (res.canceled) return null;
   const uri = res.assets[0].uri;
 
-  // Salva a foto na galeria do aparelho (expo-media-library).
+  
   const lib = await MediaLibrary.requestPermissionsAsync(true);
   if (lib.granted) {
     try {
@@ -32,7 +31,6 @@ export async function takePhoto() {
   return uri;
 }
 
-// Escolhe uma foto já existente na galeria.
 export async function pickFromGallery() {
   const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
   if (!perm.granted) {

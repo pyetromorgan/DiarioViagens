@@ -1,4 +1,3 @@
-// Tela 2: cadastro (e edição) de lugar, com foto e conversão de endereço em coordenadas.
 import React, { useState } from 'react';
 import {
   View, Text, TextInput, Image, TouchableOpacity, ScrollView, Alert,
@@ -46,20 +45,17 @@ export default function PlaceFormScreen({ route, navigation }) {
 
     setSaving(true);
     try {
-      // Permissão de localização (aviso se negada).
       const perm = await Location.requestForegroundPermissionsAsync();
       if (perm.status !== 'granted') {
         Alert.alert('Permissão de localização negada', 'Vamos tentar encontrar o endereço mesmo assim.');
       }
 
-      // Endereço -> latitude/longitude.
       const coords = await enderecoParaCoordenadas({
         rua: form.rua.trim(), numero: form.numero.trim(),
         cidade: form.cidade.trim(), estado: form.estado.trim(),
       });
 
       if (!coords) {
-        // Sem coordenadas, o lugar NÃO é cadastrado.
         Alert.alert('Endereço não encontrado', 'Confira rua, número, cidade e estado e tente de novo.');
         return;
       }

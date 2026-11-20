@@ -1,4 +1,3 @@
-// Converte o endereço digitado em latitude/longitude com Location.geocodeAsync.
 import * as Location from 'expo-location';
 
 export async function enderecoParaCoordenadas({ rua, numero, cidade, estado }) {

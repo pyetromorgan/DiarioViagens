@@ -1,4 +1,3 @@
-// Tela 1 (inicial): lista de lugares.
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { usePlaces } from '../context/PlacesContext';

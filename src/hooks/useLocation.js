@@ -1,9 +1,8 @@
-// Hook personalizado: pede permissão e obtém a localização atual do usuário.
 import { useState, useEffect, useCallback } from 'react';
 import * as Location from 'expo-location';
 
 export default function useLocation() {
-  const [location, setLocation] = useState(null); // { latitude, longitude }
+  const [location, setLocation] = useState(null); 
   const [errorMsg, setErrorMsg] = useState(null);
   const [loading, setLoading] = useState(true);
 

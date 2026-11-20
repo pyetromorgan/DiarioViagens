@@ -1,4 +1,3 @@
-// Estado global dos lugares (Context API), compartilhado entre todas as telas.
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { STATUS } from '../theme/theme';
 

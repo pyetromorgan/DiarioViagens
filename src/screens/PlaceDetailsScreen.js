@@ -1,4 +1,3 @@
-// Tela 3: detalhes do lugar, mini mapa, editar, marcar como Visitado e remover.
 import React from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
@@ -10,7 +9,7 @@ export default function PlaceDetailsScreen({ route, navigation }) {
   const { getPlace, markVisited, removePlace } = usePlaces();
   const place = getPlace(route.params.placeId);
 
-  // Após remover, o lugar deixa de existir enquanto a tela fecha.
+  
   if (!place) return null;
 
   const confirmarRemocao = () => {

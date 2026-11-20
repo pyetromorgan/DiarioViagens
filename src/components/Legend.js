@@ -1,4 +1,3 @@
-// Legenda dos gráficos: cor, nome e valor de cada fatia.
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '../theme/theme';

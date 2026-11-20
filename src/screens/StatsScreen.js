@@ -1,4 +1,3 @@
-// Tela 5: estatísticas. Os gráficos são calculados a partir dos lugares cadastrados.
 import React, { useMemo } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { PieChart } from 'react-native-svg-charts';
@@ -22,7 +21,7 @@ export default function StatsScreen() {
     [places]
   );
 
-  // Gráfico 2: quantidade por cidade/estado.
+
   const porCidade = useMemo(() => {
     const contagem = {};
     places.forEach((p) => {
